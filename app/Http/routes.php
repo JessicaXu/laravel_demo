@@ -91,7 +91,11 @@ Route::get('member/{id}', 'MemberController@info')
 
 // 测试数据库
 Route::any('test', 'StudentController@test');
-Route::any('query', 'StudentController@query1');
+Route::any('query1', 'StudentController@query1');
+
+// Eloquent ORM
+Route::any('orm', 'StudentController@orm1');
+Route::any('edit_orm', 'StudentController@editORM');
 
 /*
 |--------------------------------------------------------------------------
