@@ -94,7 +94,7 @@ Route::any('test', 'StudentController@test');
 Route::any('query1', 'StudentController@query1');
 
 // Eloquent ORM
-Route::any('orm', 'StudentController@orm1');
+Route::any('orm', ['as' => 'orm', 'uses' => 'StudentController@orm1']);
 Route::any('edit_orm', 'StudentController@editORM');
 
 // blade模板使用

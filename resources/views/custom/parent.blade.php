@@ -13,7 +13,6 @@
                 padding: 0;
                 width: 100%;
                 display: table;
-                font-weight: 100;
                 font-family: 'Lato';
             }
 
@@ -24,8 +23,7 @@
             }
 
             .content {
-                text-align: center;
-                display: inline-block;
+                text-align: left;
             }
 
             .title {
