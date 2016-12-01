@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>@yield('title')</title>
 
         <style>
             html, body {
@@ -29,7 +29,7 @@
             }
 
             .title {
-                font-size: 68px;
+                font-size: 18px;
             }
         </style>
     </head>
@@ -37,7 +37,9 @@
         <div class="container">
             <div class="content">
                 <div class="title">
-                    Route-View
+                    @section('content')
+                        This is the parent content.
+                    @show
                 </div>
             </div>
         </div>

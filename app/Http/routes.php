@@ -97,6 +97,9 @@ Route::any('query1', 'StudentController@query1');
 Route::any('orm', 'StudentController@orm1');
 Route::any('edit_orm', 'StudentController@editORM');
 
+// blade模板使用
+Route::get('blade', 'BladeController@getChild');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

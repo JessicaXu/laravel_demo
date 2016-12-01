@@ -134,12 +134,17 @@ class StudentController extends Controller{
 //        dd($data);
 
         // 也可以用update来更新
-        $data = Student::where('name', '小张')
-            -> where('age', '>', 10)
-            -> update(['age' => 3]);
+//        $data = Student::where('name', '小张')
+//            -> where('age', '>', 10)
+//            -> update(['age' => 3]);
+//        dd($data);
+
+        // 批量赋值(create)  怎样使用ORM一次添加多条记录？？
+//        $data = Student::create(['name'=>'name1', 'age'=>18, 'sex'=>30]);
+//        dd($data);
+
+        // delete
+        $data = Student::where('name', "''") -> delete();
         dd($data);
-
-        // 批量赋值(create)
-
     }
 }
