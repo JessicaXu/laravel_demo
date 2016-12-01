@@ -100,6 +100,9 @@ Route::any('edit_orm', 'StudentController@editORM');
 // blade模板使用
 Route::get('blade', 'BladeController@getChild');
 
+// Controller的Request
+Route::get('request1', 'MemberController@request1');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

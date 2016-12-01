@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 use App\Member;
+use Symfony\Component\HttpFoundation\Request;
 
 class MemberController extends Controller {
 
@@ -23,5 +24,18 @@ class MemberController extends Controller {
 //        ]);
 
         return Member::getMember();
+    }
+
+    public function request1(Request $request){
+        // 1.取值
+//        $data = $request -> all();
+//        dd($data);
+
+//          $data = $request -> input('name');
+//          dd($data);
+
+        // 2.判断请求类型
+        $data = $request -> getMethod();
+        dd($data);
     }
 }
