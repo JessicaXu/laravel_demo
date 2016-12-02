@@ -116,6 +116,10 @@ Route::group(['middleware' => ['activity']], function(){
     Route::any('activity1', 'MemberController@activity1');
     Route::any('activity2', 'MemberController@activity2');
 });
+// 与上面的方式等价
+//Route::any('activity1', [
+//    'middleware' => 'activity',
+//    'uses' => 'MemberController@activity1']);
 
 /*
 |--------------------------------------------------------------------------
