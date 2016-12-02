@@ -102,6 +102,11 @@ Route::get('blade', 'BladeController@getChild');
 
 // Controller的Request
 Route::get('request1', 'MemberController@request1');
+// Controller的session
+Route::group(['middleware' => ['web']], function () {
+    Route::get('get_session', 'MemberController@getSession');
+    Route::get('set_session', 'MemberController@setSession');
+});
 
 /*
 |--------------------------------------------------------------------------
