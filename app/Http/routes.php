@@ -110,7 +110,12 @@ Route::group(['middleware' => ['web']], function () {
 // Controller的Response
 Route::get('response1', 'MemberController@response1');
 // Controller的中间件
-
+// 这是活动开始前的宣传页面，不参与过滤
+Route::get('activity0', 'MemberController@activity0');
+Route::group(['middleware' => ['activity']], function(){
+    Route::any('activity1', 'MemberController@activity1');
+    Route::any('activity2', 'MemberController@activity2');
+});
 
 /*
 |--------------------------------------------------------------------------

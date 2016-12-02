@@ -132,4 +132,16 @@ class MemberController extends Controller {
         // action: 参数是处理函数
 //        return redirect() -> action('BladeController@getChild');
     }
+
+    public function activity0(){
+        return '双十一即将来临，敬请起来';
+    }
+
+    public function activity1(){
+        return '完爆双十一，家居建材分会场';
+    }
+
+    public function activity2(){
+        return '完爆双十一，特色美食专场';
+    }
 }
