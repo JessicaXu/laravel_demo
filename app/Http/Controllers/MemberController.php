@@ -95,4 +95,41 @@ class MemberController extends Controller {
 //        $data = Session::all();
 //        dd($data);
     }
+
+    public function response1(){
+        // 返回Json
+//        $data = [
+//            'retCode' => 0,
+//            'info' => 'success',
+//            'data' => ['total' => 5, 'detail' => 'testing msg.']
+//        ];
+//
+//        return response() -> json($data);
+
+        // response设置header
+//        $content = 'response content';
+//        $type = 'type';
+//
+//        return response($content)
+//            ->header('Content-Type', $type)
+//            ->header('X-Header-One', 'X-Header-One')
+//            ->header('X-Header-Two', 'X-Header-Two');
+
+        // 设置cookie
+//        $content = 'response content cookie';
+//
+//        return response($content)
+//            ->withCookie('name', 'value');
+
+        // 下载文件(文件路径是相对public的目录)
+//        return response() -> download('file\README.txt');
+
+        // 返回重定向
+        // url:参数是要被重定向到的目标url
+//        return redirect('blade');
+        // 路由：参数是别名(可以将路由的参数带到route的第二个参数传递过去)
+//        return redirect() -> route('blade_name');
+        // action: 参数是处理函数
+//        return redirect() -> action('BladeController@getChild');
+    }
 }

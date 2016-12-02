@@ -98,7 +98,7 @@ Route::any('orm', ['as' => 'orm', 'uses' => 'StudentController@orm1']);
 Route::any('edit_orm', 'StudentController@editORM');
 
 // blade模板使用
-Route::get('blade', 'BladeController@getChild');
+Route::get('blade', ['as' => 'blade_name', 'uses' => 'BladeController@getChild']);
 
 // Controller的Request
 Route::get('request1', 'MemberController@request1');
@@ -107,6 +107,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('get_session', 'MemberController@getSession');
     Route::get('set_session', 'MemberController@setSession');
 });
+// Controller的Response
+Route::get('response1', 'MemberController@response1');
+// Controller的中间件
+
 
 /*
 |--------------------------------------------------------------------------
